@@ -8,40 +8,26 @@
  *
  * @author Niki
  */
-
-public static void Növekvő(int szám1, int szám2, int szám3){
-
-int[] t = {szám1 , szám2 , szám3} ;
-
-int i;
-
-int j;
-
-for(j=0;j<3-1;j++){
-
-    for(i=1;i<3;i++){
-
-        if(t[i]<t[j]){
-
-        int csere=t[j];
-
-        t[j]=t[i];
-
-        t[i]=csere;
-
+public class Növekvő {
+public static void Novekvo(int a, int b, int c){
+	if(a > b && a > c && b > c){
+            System.out.println("Növekvő sorrendben:"+c+","+b+","+a); 
+		}
+	else if(a > b && a > c && c > b){
+            System.out.println("Növekvő sorrendben:"+b+","+c+","+a);
+	}
+	else if(b > a && b> c && a > c){
+            System.out.println("Növekvő sorrendben:"+c+","+a+","+b );
+	}
+        else if(b > a && b > c && c > a) {
+            System.out.println("Növekvő sorrendben:"+a+","+c+","+b);
+         }
+        else if(c > a && c > b && a> b){
+            System.out.println("Növekvő sorrendben:"+b+","+a+","+c);
         }
-
-    }
-
-}
-
-
-for(i=0;i<3;i++){
-
-System.out.print(tömb[i] + ",");
-
-    }
-
+        else{
+            System.out.println("Növekvő sorrendben:"+a+","+b+","+c);
+        }
+        
 }
 }
-    
