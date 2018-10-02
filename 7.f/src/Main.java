@@ -9,19 +9,17 @@
  * @author Niki
  */
 public class Main {
-    
-    public static int osztas(int a, int b){
+    public static int Osztás(int a, int b){
         int hanyados=0;
-        while(a>=b){
-           hanyados=hanyados+1;
-           a=a-b;
-        }
+        do{
+            hanyados=hanyados+1;
+            a=a-b;
+        }while(a>=b);
         return hanyados;
     }
-    
-    public static void main(String[] args){
+    public static void main(String[] args) {
         
-    System.out.println(osztas(145,48));
+        
+        System.out.println(Osztás(500,13));
     }
-    
 }
