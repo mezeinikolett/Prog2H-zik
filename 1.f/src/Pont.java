@@ -33,7 +33,6 @@ public class Pont {
         this.pont2 = pont2;
     }
     
-    
-            
+              
     
 }
