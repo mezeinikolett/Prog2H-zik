@@ -1,5 +1,6 @@
 
 import java.util.Objects;
+import java.util.Date;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,60 +12,57 @@ import java.util.Objects;
  *
  * @author Niki
  */
-public class Ital {
-    
-protected String név;
-protected String kiszerelés;
-private static int ár;
-protected Date gyártásiDátum;
+import java.util.Date;
+import java.util.Objects;
 
-    public Ital(String név, String kiszerelés, Date gyártásiDátum) {
+
+public class Ital {
+ 
+    protected String név;
+    protected String kiszerelés;
+    private static int ár=10;
+    protected Date gyártásiDátum;
+    public static int Euro=300;
+    public Ital(String név, String kiszerelés) {
         this.név = név;
         this.kiszerelés = kiszerelés;
-        this.gyártásiDátum = gyártásiDátum;
+        this.gyártásiDátum=new Date();
     }
 
     public String getNév() {
         return név;
     }
 
-    public void setNév(String név) {
-        this.név = név;
-    }
-
     public String getKiszerelés() {
         return kiszerelés;
-    }
-
-    public void setKiszerelés(String kiszerelés) {
-        this.kiszerelés = kiszerelés;
     }
 
     public static int getÁr() {
         return ár;
     }
-
-    public static void setÁr(int ár) {
-        Ital.ár = ár;
+    
+    public static int setÁr(){
+        return ár;
     }
 
     public Date getGyártásiDátum() {
         return gyártásiDátum;
     }
 
-    public void setGyártásiDátum(Date gyártásiDátum) {
-        this.gyártásiDátum = gyártásiDátum;
+    @Override
+    public String toString() {
+        return getNév()+","+getKiszerelés()+","+getÁr()+"Ft";
+             
     }
 
     @Override
-    public String toString() {
-        return "Ital{" + "n\u00e9v=" + név + ", kiszerel\u00e9s=" + kiszerelés + ", gy\u00e1rt\u00e1siD\u00e1tum=" + gyártásiDátum + '}';
+    public int hashCode() {
+        int hash = 7;
+        return hash;
     }
 
+    @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -83,14 +81,17 @@ protected Date gyártásiDátum;
         }
         return true;
     }
+    public void setÁr(int ár){
+         Ital.ár = ár;
+     }
+    public double getAktuálisÁr(){
+         return ár/Euro;
+         
+             }
     
     
+   
 
-
-
-
-
-
-
+    
+ 
 }
-    
